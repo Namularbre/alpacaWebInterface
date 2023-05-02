@@ -38,14 +38,18 @@ class HomeController {
         let button = document.querySelector("#question-button");
 
         button.addEventListener('click', async () => {
+            const minQuestionLength = 3;
             const questionInput = document.querySelector('#question');
 
-            if (questionInput.value.length >= 3) {
+            if (questionInput.value.length >= minQuestionLength) {
                 await this.#view.displayQuestion(questionInput.value);
+                await this.#view.disableQuestionInput();
             }
 
             const response = await this.#model.getResponse(questionInput.value);
             await this.#view.displayResponse(response);
+            await this.#view.enableQuestionInput();
+
             questionInput.value = "";
         });
     }
@@ -90,6 +94,22 @@ class HomeView {
         let loadingComponent = document.querySelector('v-load');
 
         loadingComponent.style = "display: none;";
+    }
+
+    async disableQuestionInput() {
+        const questionInput = document.querySelector('#question');
+        const questionBtn = document.querySelector('#question-button');
+
+        questionInput.disabled = true;
+        questionBtn.disabled = true;
+    }
+
+    async enableQuestionInput() {
+        const questionInput = document.querySelector('#question');
+        const questionBtn = document.querySelector('#question-button');
+
+        questionInput.disabled = false;
+        questionBtn.disabled = false;
     }
 }
 

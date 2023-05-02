@@ -29,7 +29,7 @@ class AlpacaController {
                 res.send({response : response});
             });
         } else {
-            res.statusCode(402);
+            res.status(402);
         }
     }
 }
