@@ -1,0 +1,25 @@
+<div class="position-relative h-100 d-flex flex-column">
+    <div class="container mb-3">
+        <h1 class="text-center fw-bold m-3">Alpaca.cpp</h1>
+        <div class="alert alert-warning text-center">
+            <p>L'application peut mettre tu temps à répondre. C'est normal. Patienter et ne spammez pas de question.</p>
+        </div>
+
+        <p class="text-center">Ici commence votre conversation avec Alpaca :</p>
+        <div class="overflow-auto" style="max-height: 50vh;">
+            <!--Here goes the chat-->
+            <div id="chat-container"></div>
+        </div>
+    </div>
+    <!--La div en dessous doit être en bas de l'écran-->
+    <div class="container position-fixed bottom-0 start-50 translate-middle-x z-index-2 bg-light">
+        <form class="">
+            <label class="form-label" for="question">Votre question</label>
+            <div class="d-flex">
+                <input id="question" class="form-control" type="text" placeholder="Pausez votre question" name="question" min="3" required>
+                <input id="question-button" class="btn btn-primary" type="button" value="Envoyer">
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/js/chat.js" nonce="nonce"></script>
