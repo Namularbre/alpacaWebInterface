@@ -101,6 +101,7 @@ class HomeView {
         const questionBtn = document.querySelector('#question-button');
 
         questionInput.disabled = true;
+        questionInput.value = "";
         questionBtn.disabled = true;
     }
 
