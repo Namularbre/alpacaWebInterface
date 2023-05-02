@@ -5,5 +5,6 @@
 views/home.hbs,1\9\19835a395c8fc6f8747d2a92848adcaad188aa65
 G
 routers/alpacaRouter.js,f\a\fa5b037f54cb7c9208173b93825fa9aadd791a58
-F
-views/layouts/main.hbs,a\6\a69749b3552dd6bd3f213a59857cede918aa7c1e
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

@@ -31,6 +31,7 @@ class HomeController {
 
     async init() {
         await this.defineQuestionButton();
+        await this.#view.hideLoadingAnimation();
     }
 
     async defineQuestionButton() {
@@ -45,6 +46,7 @@ class HomeController {
 
             const response = await this.#model.getResponse(questionInput.value);
             await this.#view.displayResponse(response);
+            questionInput.value = "";
         });
     }
 }
@@ -59,6 +61,8 @@ class HomeView {
         const chatContainer = document.querySelector('#chat-container');
 
         chatContainer.appendChild(chatComponent);
+
+        await this.displayLoadingAnimation();
     }
 
     async displayResponse(response) {
@@ -72,6 +76,20 @@ class HomeView {
         const chatContainer = document.querySelector('#chat-container');
 
         chatContainer.appendChild(chatComponent);
+
+        await this.hideLoadingAnimation();
+    }
+
+    async displayLoadingAnimation() {
+        let loadingComponent = document.querySelector('v-load');
+
+        loadingComponent.style = "display: block;";
+    }
+
+    async hideLoadingAnimation() {
+        let loadingComponent = document.querySelector('v-load');
+
+        loadingComponent.style = "display: none;";
     }
 }
 
