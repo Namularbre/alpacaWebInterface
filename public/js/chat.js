@@ -7,8 +7,6 @@ class HomeModel {
             httpResponse = await httpResponse.json();
             let response = httpResponse.response;
             response = response.split('[?25h')[1];
-            //removing windows CMD special chars
-            response = response.replace(/\x1B\[[0-9;]*[mG]/g, '');
             return response;
         } else {
             return {data: 'Erreur durant l\'envois de votre question. Veuillez recharger la page.'};
@@ -35,16 +33,17 @@ class HomeController {
 
         button.addEventListener('click', async () => {
             const minQuestionLength = 3;
+            const maxQuestionLength = 10000;
             const questionInput = document.querySelector('#question');
             const question = questionInput.value;
 
-            if (question.length >= minQuestionLength) {
+            if (question.length >= minQuestionLength && question.length < maxQuestionLength) {
                 await this.#view.displayQuestion(question);
                 await this.#view.disableQuestionInput();
                 const response = await this.#model.getResponse(question);
                 await this.#view.displayResponse(response);
             } else {
-                alert("wip");
+                alert("Le nombre de caractères dans votre question doit être compris entre 3 et 10000.");
                 return;
             }
 
