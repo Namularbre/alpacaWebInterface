@@ -8,10 +8,7 @@ class HomeModel {
             let response = httpResponse.response;
             response = response.split('[?25h')[1];
             //removing windows CMD special chars
-            //response = response.replace(/^a-zA-Z0-9 ]/g, '');
             response = response.replace(/\x1B\[[0-9;]*[mG]/g, '');
-            //response = response.replace('[K', '');
-            //response = response.replace('\r\n', '');
             return response;
         } else {
             return {data: 'Erreur durant l\'envois de votre question. Veuillez recharger la page.'};
