@@ -1,7 +1,6 @@
 class HomeModel {
     async getResponse(question) {
         const url = '/alpaca?' + new URLSearchParams({"question" : question});
-
         let httpResponse = await fetch(url);
 
         if (httpResponse.status === 200) {
@@ -9,10 +8,10 @@ class HomeModel {
             let response = httpResponse.response;
             response = response.split('[?25h')[1];
             //removing windows CMD special chars
-            response = response.replace(/^a-zA-Z0-9 ]/g, '');
+            //response = response.replace(/^a-zA-Z0-9 ]/g, '');
             response = response.replace(/\x1B\[[0-9;]*[mG]/g, '');
-            response = response.replace('[K', '');
-            response = response.replace('\r\n', '');
+            //response = response.replace('[K', '');
+            //response = response.replace('\r\n', '');
             return response;
         } else {
             return {data: 'Erreur durant l\'envois de votre question. Veuillez recharger la page.'};
@@ -40,14 +39,18 @@ class HomeController {
         button.addEventListener('click', async () => {
             const minQuestionLength = 3;
             const questionInput = document.querySelector('#question');
+            const question = questionInput.value;
 
-            if (questionInput.value.length >= minQuestionLength) {
-                await this.#view.displayQuestion(questionInput.value);
+            if (question.length >= minQuestionLength) {
+                await this.#view.displayQuestion(question);
                 await this.#view.disableQuestionInput();
+                const response = await this.#model.getResponse(question);
+                await this.#view.displayResponse(response);
+            } else {
+                alert("wip");
+                return;
             }
 
-            const response = await this.#model.getResponse(questionInput.value);
-            await this.#view.displayResponse(response);
             await this.#view.enableQuestionInput();
 
             questionInput.value = "";
@@ -70,8 +73,6 @@ class HomeView {
     }
 
     async displayResponse(response) {
-        console.log(response);
-
         let chatComponent = document.createElement('v-chat');
         chatComponent.setAttribute('author', 'Alpaca');
         chatComponent.setAttribute('text', response);
