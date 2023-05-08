@@ -23,13 +23,19 @@ This file will be executed by the web application.
 
 <i>Note : A linux version is coming, because I need to install this on a server.</i>
 
-After, you will need Node js, at least the version 16.17.1.
+After, you will need Node js, at least the version 18.16.0.
 
 In the folder where you have put the code, run 
 ````
 npm i
 ```` 
 It will install dependencies.
+
+You also need to create a ".env" file in the project folder, and fill it like this :
+````
+HOST=127.0.0.1 //Your host
+PORT=3000 //Port of your app
+````
 
 To launch the application, type 
 ````
