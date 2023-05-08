@@ -50,9 +50,5 @@ And... that's all. You will notice that the application is in french. I will cha
 - Disable text prompt while loading
 - Conversation save (read only)
 
-<h2>How can you use this application</h2>
-
-You are probably asking what the application licence. Well, give me credits, say my name and you're done.
-
 <i>Note, I will put them in the footer of the page, so you will have to do nothing.</i>
 
