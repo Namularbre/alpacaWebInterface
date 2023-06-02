@@ -15,7 +15,7 @@ In the Release folder, where you find the chat.exe file,
 add a script file like this if you are on windows, named "web.bat" :
 
 ````
-cd [direct path to the Release folder]
+cd [direct path to the Alpaca folder]
 .\Release\chat.exe -p %1%
 ````
 
