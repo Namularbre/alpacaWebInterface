@@ -46,8 +46,9 @@ And... that's all. You will notice that the application is in French.
 I will change that later, I'm planning to work on the frontend part a lot.
 
 <h2>TODO</h2>
-- Conversation save (read only)
-- Make the view more responsive
-
+<ul>
+<li>Conversation save (read only)</li>
+<li>Make the view more responsive</li>
+</ul>
 <i>Note, I will put them in the footer of the page, so you will have to do nothing.</i>
 
