@@ -1,13 +1,14 @@
 const pty = require('node-pty');
 
 class AlpacaController {
+    static alpacaContext = "(You are an IA here to answer question people ask to you. You are here to help as much as you can.) Here is your question : ";
 
     static async getResponse(req, res) {
         const question = req.query.question;
         const minQuestionSize = 3;
         const maxQuestionSize = 10000;
 
-        let alpacaProcess = pty.spawn(`C:\\alpaca\\alpaca.cpp\\Release\\web.bat`, [`${question}`], {
+        let alpacaProcess = pty.spawn(`C:\\alpaca\\alpaca.cpp\\Release\\web.bat`, [`${AlpacaController.alpacaContext} ${question}`], {
             name: 'xterm-color',
             cols: 10000,
             rows: 0,
