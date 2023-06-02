@@ -1,7 +1,15 @@
+.chat-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .chat {
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+    width: 100%;
+    max-width: 80vw;
+    height: auto;
 }
 
 .chat-alpaca {
@@ -9,6 +17,9 @@
     padding: 10px;
     margin-bottom: 10px;
     background: #dcdcdc;
+    width: 100%;
+    max-width: 80vw;
+    height: auto;
 }
 
 .chat>p {
@@ -17,6 +28,11 @@
 
 @media screen and (max-width: 480px) {
     .chat {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .chat-alpaca {
         padding: 5px;
         margin-bottom: 5px;
     }

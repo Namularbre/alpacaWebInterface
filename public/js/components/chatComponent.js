@@ -28,7 +28,6 @@ class ChatComponent extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <link href="../../css/chatComponent.css" rel="stylesheet" type="text/css">
             <div class="${this.#chatStyle}">
                 <p>
                     ${this.#author}: ${this.#text}

@@ -1,24 +1,24 @@
 <div class="position-relative h-100 d-flex flex-column">
-    <div class="container mb-3">
-        <h1 class="text-center fw-bold m-3">Alpaca.cpp</h1>
-        <div class="alert alert-warning text-center">
+    <div class="container">
+        <h1>Alpaca.cpp</h1>
+        <div class="alert alert-info">
             <p>L'application peut mettre du temps à répondre selon la puissance de votre PC.</p>
         </div>
 
-        <p class="text-center">Ici commence votre conversation avec Alpaca :</p>
-        <div class="overflow-auto" style="max-height: 50vh;">
+        <p>Ici commence votre conversation avec Alpaca :</p>
+        <div style="max-height: 50vh;">
             <!--Here goes the chat-->
             <div id="chat-container"></div>
         </div>
     </div>
     <v-load></v-load>
     <!--La div en dessous doit être en bas de l'écran-->
-    <div class="container position-fixed bottom-0 start-50 translate-middle-x z-index-2 bg-light">
+    <div class="question">
         <form>
-            <label class="form-label" for="question">Votre question</label>
-            <div class="d-flex">
-                <input id="question" class="form-control" type="text" placeholder="Pausez votre question" name="question" min="3" required>
-                <input id="question-button" class="btn btn-primary" type="button" value="Envoyer">
+            <label for="question">Votre question :</label>
+            <div>
+                <input id="question" type="text" placeholder="Pausez votre question" name="question" min="3" required>
+                <input id="question-button" type="button" value="Envoyer">
             </div>
         </form>
     </div>

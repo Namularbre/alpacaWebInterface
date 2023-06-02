@@ -10,5 +10,3 @@ F
 .env,3\c\3c84dcdc6bbe3d7817c49dcdc327b926fea1808a
 9
 	server.js,d\c\dc60ea9ee1ff6246bf342463277d5b914db2883d
-a
-1public/js/components/loadingAnimationComponent.js,b\9\b9f6eef9fd5c9a9386f4641f5be6e2e8c38011e0
