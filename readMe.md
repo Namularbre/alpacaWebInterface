@@ -42,13 +42,14 @@ To launch the application, type
 node server.js
 ````
 
-And... that's all. You will notice that the application is in french. I will change that later, i'm planning to work on the frontend part a lot.
+And... that's all. You will notice that the application is in French.
+I will change that later, I'm planning to work on the frontend part a lot.
 
 <h2>TODO</h2>
 
 - Switch French-> English and English -> French
-- Disable text prompt while loading
 - Conversation save (read only)
+- Make the view more responsive
 
 <i>Note, I will put them in the footer of the page, so you will have to do nothing.</i>
 
