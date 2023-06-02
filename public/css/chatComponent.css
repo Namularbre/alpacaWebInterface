@@ -1,0 +1,23 @@
+.chat {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-alpaca {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #dcdcdc;
+}
+
+.chat>p {
+    margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .chat {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}

@@ -72,7 +72,6 @@ class HomeView {
         let chatComponent = document.createElement('v-chat');
         chatComponent.setAttribute('author', 'Alpaca');
         chatComponent.setAttribute('text', response);
-        chatComponent.setAttribute('background', 'bg-light');
 
         const chatContainer = document.querySelector('#chat-container');
 

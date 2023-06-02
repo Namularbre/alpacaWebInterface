@@ -2,6 +2,8 @@ class ChatComponent extends HTMLElement {
     #text;
     #author;
     #background;
+    #isAlpaca;
+    #chatStyle;
 
     constructor() {
         super();
@@ -9,6 +11,8 @@ class ChatComponent extends HTMLElement {
         this.#text = "";
         this.#author = "";
         this.#background = "";
+
+        this.#chatStyle = "chat";
     }
 
     connectedCallback() {
@@ -16,17 +20,20 @@ class ChatComponent extends HTMLElement {
         this.#author = this.getAttribute('author');
         this.#background = this.getAttribute('background');
 
+        if (this.#author === "Alpaca")
+            this.#chatStyle = 'chat-alpaca';
+
         this.render();
     }
 
     render() {
         this.innerHTML = `
-            <div class="container border ${this.#background}">
-                <p class="">
+            <link href="../../css/chatComponent.css" rel="stylesheet" type="text/css">
+            <div class="${this.#chatStyle}">
+                <p>
                     ${this.#author}: ${this.#text}
                 </p>
-            </div>     
-            <!--user-select-all-->
+            </div>
         `;
     }
 }
