@@ -46,8 +46,6 @@ And... that's all. You will notice that the application is in French.
 I will change that later, I'm planning to work on the frontend part a lot.
 
 <h2>TODO</h2>
-
-- Switch French-> English and English -> French
 - Conversation save (read only)
 - Make the view more responsive
 
