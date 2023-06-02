@@ -57,7 +57,7 @@ class HomeController {
 class HomeView {
     async displayQuestion(questionContent) {
         let chatComponent = document.createElement('v-chat');
-        chatComponent.setAttribute('author', 'Vous');
+        chatComponent.setAttribute('author', 'You');
         chatComponent.setAttribute('text', questionContent);
         chatComponent.setAttribute('background', 'bg-white');
 
