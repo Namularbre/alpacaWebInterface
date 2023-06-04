@@ -2,7 +2,6 @@ class ChatComponent extends HTMLElement {
     #text;
     #author;
     #background;
-    #isAlpaca;
     #chatStyle;
 
     constructor() {
