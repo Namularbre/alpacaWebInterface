@@ -137,3 +137,12 @@ input[type="button"] {
     padding: 1em;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.chat-container {
+    height: 100%;
+    overflow-y: visible; /*mettre en auto devrai marcher, à voir*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
