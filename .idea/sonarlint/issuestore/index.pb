@@ -12,8 +12,6 @@ a
 1public/js/components/loadingAnimationComponent.js,b\9\b9f6eef9fd5c9a9386f4641f5be6e2e8c38011e0
 O
 public/css/loadingAnimation.css,0\f\0f2d91831867de757574ed5fc791dedf9c1bbf2c
-O
-controllers/alpacaController.js,1\a\1a8d681390c74f83304135fdcee7fb33ef895ee7
 >
 views/home.hbs,1\9\19835a395c8fc6f8747d2a92848adcaad188aa65
 9
