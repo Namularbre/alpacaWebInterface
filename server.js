@@ -13,7 +13,7 @@ app.set('views', './views');
 
 const alpacaRouter = require('./routers/alpacaRouter');
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 app.use('/alpaca', alpacaRouter);
 
@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/chat', (req, res) => {
-   res.render('chat', {title : 'chat'})
+   res.render('chat', {title : 'chat'});
 });
 
 app.listen(port, host, () => {
