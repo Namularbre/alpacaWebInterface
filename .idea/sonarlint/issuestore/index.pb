@@ -16,3 +16,17 @@ O
 views/home.hbs,1\9\19835a395c8fc6f8747d2a92848adcaad188aa65
 9
 	readMe.md,2\1\21e750cb5a54cdc4855496cd8fcadefd187f9682
+D
+public/css/style.css,1\e\1ef0e38ec90181a17549647e1a67072ac5d804da
+A
+public/js/chat.js,2\4\2423f9836931bf9097f000721576347d5e2d7407
+G
+routers/alpacaRouter.js,f\a\fa5b037f54cb7c9208173b93825fa9aadd791a58
+L
+public/css/chatComponent.css,4\4\44484024b45ec1e287fe93a878a634e8f9e0bfeb
+>
+views/chat.hbs,c\5\c52db3c4936587cc265ffb57853efc2efdf4b8df
+U
+%public/js/components/chatComponent.js,7\b\7b2277153dabeb397266e729440c5ac5076e945c
+9
+	server.js,d\c\dc60ea9ee1ff6246bf342463277d5b914db2883d

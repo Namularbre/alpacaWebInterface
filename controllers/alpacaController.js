@@ -1,6 +1,3 @@
-const os = require('os');
-const pty = require('node-pty');
-
 const AlpacaModel = require('../models/alpacaModel');
 
 class AlpacaController {
