@@ -1,7 +1,6 @@
 # Alpaca web interface
 
-Alpaca is an AI chat bot, that can answer some question.
-It has some advantages, like running on a computer or respect your privacy.
+Alpaca is an AI chat bot that can run on your computer.
 
 <h2>Requirement</h2>
 
@@ -11,7 +10,7 @@ I never tested other version.
 
 <h2>Installation</h2>
 
-In the Release folder, where you find the chat.exe file, 
+In the Release folder of Alpaca, where you find the chat.exe file, 
 add a script file like this if you are on windows, named "web.bat" :
 
 ````
@@ -21,9 +20,7 @@ cd [direct path to the Alpaca folder]
 
 This file will be executed by the web application.
 
-<i>Note : A linux version is coming, because I need to install this on a server.</i>
-
-After, you will need Node js, at least the version 18.16.0.
+After this, you will need Node js, at least version 18.16.0.
 
 In the folder where you have put the code, run 
 ````
@@ -50,5 +47,4 @@ I will change that later, I'm planning to work on the frontend part a lot.
 <li>Conversation save (read only)</li>
 <li>Make the view more responsive</li>
 </ul>
-<i>Note, I will put them in the footer of the page, so you will have to do nothing.</i>
 
